@@ -1,140 +1,161 @@
 <!doctype html>
 <html lang="hi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mentor Mahira</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Mentor Mahira</title>
 
-  <style>
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
-      background:#f0f4f3;
-      color:#0b1220;
-      padding:20px;
-      display:flex;
-      justify-content:center;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background:#f0f4f3;
+  color:#0b1220;
+  padding:20px;
+  display:flex;
+  justify-content:center;
+}
 
-    .wrap{
-      width:100%;
-      max-width:1080px;
-      background:#fff;
-      border-radius:10px;
-      box-shadow:0 10px 30px rgba(0,0,0,0.08);
-      text-align:center;
-      padding:20px;
-    }
+.wrap{
+  width:100%;
+  max-width:1080px;
+  background:#fff;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  text-align:center;
+  padding:20px;
+}
 
-    .top-banner{
-      background:#19a3f7;
-      color:#fff;
-      padding:8px 12px;
-      border-radius:8px;
-      font-weight:600;
-      margin-bottom:16px;
-    }
+.top-banner{
+  background:#19a3f7;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:600;
+  margin-bottom:16px;
+}
 
-    .logo{
-      width:90px;
-      height:90px;
-      border-radius:16px;
-      background:#e9f6ff;
-      margin:0 auto 14px;
-      overflow:hidden;
-    }
-    .logo img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-    }
+.logo{
+  width:90px;
+  height:90px;
+  border-radius:16px;
+  background:#e9f6ff;
+  margin:0 auto 14px;
+  overflow:hidden;
+}
+.logo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    .heading h1{
-      font-size:20px;
-      font-weight:700;
-      line-height:1.3;
-      margin-bottom:6px;
-    }
-    .accent{color:#0aa3ff;}
+h1{
+  font-size:20px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+.accent{color:#0aa3ff;}
 
-    .sub-title{
-      color:#0b6b2e;
-      font-weight:700;
-      margin-bottom:6px;
-    }
+.sub-title{
+  color:#0b6b2e;
+  font-weight:700;
+  margin-bottom:6px;
+}
 
-    .stats{
-      margin-bottom:12px;
-      color:#444;
-      font-weight:600;
-    }
+.stats{
+  margin-bottom:12px;
+  color:#444;
+  font-weight:600;
+}
 
-    .desc{
-      padding:10px;
-      font-size:14px;
-      margin-bottom:16px;
-      color:#333;
-    }
-    .desc small{color:#777;}
+.desc{
+  padding:10px;
+  font-size:14px;
+  margin-bottom:16px;
+  color:#333;
+  line-height:1.6;
+}
 
-    .btn-telegram{
-      background:linear-gradient(180deg,#0b7b2b,#045d1f);
-      color:#fff;
-      padding:14px 32px;
-      border-radius:40px;
-      font-weight:800;
-      font-size:18px;
-      text-decoration:none;
-      display:inline-block;
-      animation:pulseBtn 2s infinite ease-in-out;
-      box-shadow:0 0 20px rgba(11,123,43,0.4);
-      margin-bottom:14px;
-    }
+/* Telegram Button */
+.btn-telegram{
+  background:linear-gradient(180deg,#0b7b2b,#045d1f);
+  color:#fff;
+  padding:14px 32px;
+  border-radius:40px;
+  font-weight:800;
+  font-size:18px;
+  text-decoration:none;
+  display:inline-block;
+  animation:pulseBtn 2s infinite ease-in-out;
+  box-shadow:0 0 20px rgba(11,123,43,0.4);
+  margin-bottom:12px;
+  cursor:pointer;
+}
 
-    @keyframes pulseBtn{
-      0%{transform:scale(1)}
-      50%{transform:scale(1.05)}
-      100%{transform:scale(1)}
-    }
+@keyframes pulseBtn{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.05)}
+  100%{transform:scale(1)}
+}
 
-    .timer-row{
-      display:flex;
-      gap:8px;
-      justify-content:center;
-      margin-bottom:14px;
-    }
-    .timer-pill{
-      background:#e6f5ff;
-      padding:8px 14px;
-      border-radius:20px;
-      font-weight:700;
-    }
+/* Broker Button */
+.broker-btn{
+  background:linear-gradient(180deg,#ff9800,#e65100);
+  color:#fff;
+  padding:14px 32px;
+  border-radius:40px;
+  font-weight:800;
+  font-size:17px;
+  text-decoration:none;
+  display:inline-block;
+  margin-bottom:16px;
+  box-shadow:0 0 18px rgba(255,152,0,0.45);
+  transition:transform .2s ease;
+}
+.broker-btn:hover{
+  transform:scale(1.05);
+}
 
-    .note{
-      font-size:14px;
-      color:#333;
-      margin-bottom:10px;
-    }
+.timer-row{
+  display:flex;
+  gap:8px;
+  justify-content:center;
+  margin-bottom:14px;
+}
 
-    .footer-links{
-      margin-top:20px;
-      font-size:13px;
-      line-height:1.7;
-    }
-    .footer-links a{
-      color:#0a84ff;
-      text-decoration:none;
-      font-weight:600;
-    }
+.timer-pill{
+  background:#e6f5ff;
+  padding:8px 14px;
+  border-radius:20px;
+  font-weight:700;
+}
 
-    .fb-disclaimer{
-      font-size:12px;
-      color:#777;
-      margin-top:20px;
-      line-height:1.5;
-    }
-  </style>
-<!-- Meta Pixel Code -->
+.note{
+  font-size:14px;
+  color:#333;
+  margin-bottom:10px;
+}
+
+.footer-links{
+  margin-top:20px;
+  font-size:13px;
+  line-height:1.7;
+}
+.footer-links a{
+  color:#0a84ff;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.fb-disclaimer{
+  font-size:12px;
+  color:#777;
+  margin-top:20px;
+  line-height:1.5;
+}
+</style>
+
+ <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -152,59 +173,69 @@ src="https://www.facebook.com/tr?id=897257776336662&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
 
+  
 </head>
- 
+
 <body>
 
 <div class="wrap">
 
-  <div class="top-banner">Don't have Telegram yet? Try it now</div>
+  <div class="top-banner">Join Our Free Trading Learning Community</div>
 
   <div class="logo">
-    <img src="logo.jpeg" alt="Logo">
+    <img src="logo.jpeg" alt="Elite GT">
   </div>
 
-  <div class="heading">
-    <h1>Learn how to Trade with <span class="accent">The Trading Mentor Experts</span></h1>
-  </div>
-
-  <div class="sub-title">Unlock the Secrets to Crypto & Forex Success</div>
-  <div class="stats">12,555 Subscribers</div>
+  <h1>Learn Smart Trading with <span class="accent">The Trading Mentor Mahira</span></h1>
+  <div class="sub-title">Forex & Crypto Market Learning – Step by Step</div>
+  <div class="stats">Trusted by 18,500+ Learners</div>
 
   <div class="desc">
-    The Best Crypto and Forex Signals For Educational Use Only.<br>
-    <small>No financial advice • Market risk involved</small>
+    Join our educational community to understand Forex & Crypto markets.
+    Learn technical concepts, market psychology and risk management in a simple way.
+    <br><br>
+    <small>Educational purpose only • No guaranteed returns • Market risk involved</small>
   </div>
 
-  <!-- ✅ BUTTON → redirect.html -->
-  <a class="btn-telegram" href="https://t.me/+wFwLhvCs48s5ZmRl" target="_blank">
-    View In Telegram
+  <!-- Telegram CTA -->
+  <div class="btn-telegram" onclick="joinTelegram()">
+    View Community on Telegram
+  </div>
+
+  <!-- Broker CTA -->
+  <a href="redirect.html"
+     class="broker-btn"
+     target="_blank"
+     onclick="trackBroker()">
+     Start Trading with a Trusted Forex Broker
   </a>
 
+  <!-- Timer -->
   <div class="timer-row">
     <div class="timer-pill" id="minutes">10 Min</div>
     <div class="timer-pill" id="seconds">00 Sec</div>
   </div>
 
   <div class="note">
-    If you have <b>Telegram</b>, you can join instantly
+    Telegram app users can join instantly with one click
   </div>
 
   <div class="footer-links">
-    Ads Maintained By
-    <a href="https://t.me/+ifc6dyg-xiA2ZGE1" target="_blank">Digital Ads Expert</a><br><br>
-    <a href="https://ElitePips.online/privacy" target="_blank">Privacy Policy</a> •
-    <a href="https://ElitePips.online/disclaimer" target="_blank">Disclaimer</a> •
-    <a href="https://ElitePips.online/terms" target="_blank">Terms</a>
+    <a href="/privacy.html" target="_blank">Privacy Policy</a> •
+    <a href="/disclaimer.html" target="_blank">Disclaimer</a> •
+    <a href="/terms.html" target="_blank">Terms & Conditions</a>
+    <br><br>
+    Ads Managed By
+    <a href="https://t.me/+ifc6dyg-xiA2ZGE1" target="_blank">Digital Ads Expert</a>
   </div>
 
   <div class="fb-disclaimer">
-    This site is not a part of the Facebook™ website or Facebook Inc.
-    This site is NOT endorsed by Facebook™ in any way.
+    This website is independent and not associated with Facebook™ or Meta Platforms Inc.
   </div>
 
 </div>
 
+<!-- TIMER SCRIPT -->
 <script>
 let remaining = 10 * 60;
 const m = document.getElementById("minutes");
@@ -220,6 +251,32 @@ function updateTimer(){
 }
 updateTimer();
 setInterval(updateTimer, 1000);
+</script>
+
+<!-- TELEGRAM REDIRECT -->
+<script>
+function joinTelegram(){
+  if(typeof fbq === "function"){
+    fbq('trackCustom','TelegramJoinIntent');
+  }
+
+  const tgWeb = "https://t.me/+wFwLhvCs48s5ZmRl";
+  const tgApp = "tg://join?invite=wFwLhvCs48s5ZmRl";
+
+  window.location.href = tgApp;
+  setTimeout(function(){
+    window.location.href = tgWeb;
+  },1200);
+}
+</script>
+
+<!-- BROKER TRACKING -->
+<script>
+function trackBroker(){
+  if(typeof fbq === "function"){
+    fbq('trackCustom','BrokerAccountClick');
+  }
+}
 </script>
 
 </body>
