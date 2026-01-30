@@ -98,23 +98,6 @@ h1{
   100%{transform:scale(1)}
 }
 
-/* Broker Button */
-.broker-btn{
-  background:linear-gradient(180deg,#ff9800,#e65100);
-  color:#fff;
-  padding:14px 32px;
-  border-radius:40px;
-  font-weight:800;
-  font-size:17px;
-  text-decoration:none;
-  display:inline-block;
-  margin-bottom:16px;
-  box-shadow:0 0 18px rgba(255,152,0,0.45);
-  transition:transform .2s ease;
-}
-.broker-btn:hover{
-  transform:scale(1.05);
-}
 
 .timer-row{
   display:flex;
@@ -202,13 +185,7 @@ src="https://www.facebook.com/tr?id=897257776336662&ev=PageView&noscript=1"
     View Community on Telegram
   </div>
 
-  <!-- Broker CTA -->
-  <a href="redirect.html"
-     class="broker-btn"
-     target="_blank"
-     onclick="trackBroker()">
-     Start Trading with a Trusted Forex Broker
-  </a>
+ 
 
   <!-- Timer -->
   <div class="timer-row">
@@ -260,7 +237,7 @@ function joinTelegram(){
     fbq('trackCustom','TelegramJoinIntent');
   }
 
-  const tgWeb = "https://t.me/+wFwLhvCs48s5ZmRl";
+  const tgWeb = "https://telegram.me/+wFwLhvCs48s5ZmRl";
   const tgApp = "tg://join?invite=wFwLhvCs48s5ZmRl";
 
   window.location.href = tgApp;
